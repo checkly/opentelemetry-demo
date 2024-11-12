@@ -208,7 +208,7 @@ func main() {
 
 	log.Infof("service config: %+v", svc)
 
-	lis, err := net.Listen("tcp", fmt.Sprintf(":%s", port))
+	lis, err := net.Listen("tcp6", fmt.Sprintf("[::]:%s", port))
 	if err != nil {
 		log.Fatal(err)
 	}
